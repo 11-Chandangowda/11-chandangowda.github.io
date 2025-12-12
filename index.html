@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chandan Gowda VG | Portfolio</title>
   <meta name="description" content="The personal portfolio of Chandan Gowda VG — projects, skills, and contact.">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,6 +118,14 @@
     /* Footer */
     footer { padding:2.4rem 1rem; color:var(--muted); border-top:1px solid var(--line); text-align:center; }
     .social { display:flex; gap:.8rem; justify-content:center; margin-top:1rem; }
+
+    /* Small helpers inside project cards */
+    .project-title { margin: 0 0 0.5rem; font-size:1.05rem; font-weight:700; }
+    .project-desc { margin:0 0 0.75rem; color:var(--muted); text-align:left; font-size:0.97rem; }
+    .project-meta { text-align:left; font-size:0.9rem; color:var(--muted); margin-top:0.5rem; }
+    .meta-label { font-weight:600; color:var(--text); margin-right:6px; }
+    .tech-list { list-style:none; padding:0; margin:0; display:flex; gap:8px; flex-wrap:wrap; }
+    .tech-list li { background:rgba(255,255,255,0.03); padding:.25rem .5rem; border-radius:8px; font-size:0.85rem; }
   </style>
 </head>
 <body>
@@ -215,26 +223,119 @@
 
   <!-- Projects -->
   <section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="card">
-      <h3>Drowsiness Detection</h3>
-      <p>A machine learning project to detect driver drowsiness using real-time webcam input.</p>
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <!-- Project 1: YOLO Drowsiness Detection -->
+      <div class="card">
+        <h3 class="project-title">Drowsiness Detection (YOLOv5)</h3>
+        <p class="project-desc">
+          Real-time drowsiness detection system that analyses webcam video to detect eye-closure, blink rate, yawning,
+          and head posture. Alerts are triggered when fatigue thresholds are reached to help prevent accidents.
+        </p>
+        <div class="project-meta">
+          <div><span class="meta-label">Tech:</span>
+            <ul class="tech-list">
+              <li>Python</li><li>YOLOv5</li><li>OpenCV</li><li>PyTorch</li>
+            </ul>
+          </div>
+          <div style="margin-top:8px;"><span class="meta-label">Role:</span> Model training, dataset prep, real-time pipeline, latency optimization.</div>
+          <div style="margin-top:8px;"><span class="meta-label">Outcome:</span> Achieved fast inference suitable for webcam input (~20–30 FPS on mid-range GPU) and robust detection in varied lighting.</div>
+        </div>
+      </div>
+
+      <!-- Project 2: Liveon Biolabs Website -->
+      <div class="card">
+        <h3 class="project-title">Liveon Biolabs — Corporate Website</h3>
+        <p class="project-desc">
+          Full website development for Liveon Biolabs: content architecture, page design, service pages, and on-page SEO.
+          Implemented responsive layout and contact/career pages for incoming candidate flow.
+        </p>
+        <div class="project-meta">
+          <div><span class="meta-label">Tech:</span>
+            <ul class="tech-list">
+              <li>WordPress</li><li>Elementor</li><li>SEO</li><li>HTML/CSS</li>
+            </ul>
+          </div>
+          <div style="margin-top:8px;"><span class="meta-label">Role:</span> Lead developer — structure, UI, SEO titles/meta, and deploy to production.</div>
+          <div style="margin-top:8px;"><span class="meta-label">Outcome:</span> Live site with optimized service pages and better discoverability for target keywords.</div>
+        </div>
+      </div>
+
+      <!-- Project 3: Liveon Technolabs Website -->
+      <div class="card">
+        <h3 class="project-title">Liveon Technolabs — RF Shielding Website</h3>
+        <p class="project-desc">
+          Designed and built the Liveon Technolabs website focusing on RF Shielded Enclosures and product pages.
+          Improved UI, performance, and SEO structure geared toward industrial customers.
+        </p>
+        <div class="project-meta">
+          <div><span class="meta-label">Tech:</span>
+            <ul class="tech-list">
+              <li>Astra Theme</li><li>Elementor</li><li>WordPress</li><li>Performance Tuning</li>
+            </ul>
+          </div>
+          <div style="margin-top:8px;"><span class="meta-label">Role:</span> Frontend & SEO implementation, content layout, image optimization.</div>
+          <div style="margin-top:8px;"><span class="meta-label">Outcome:</span> Live site with improved page speed and initial SEO groundwork completed.</div>
+        </div>
+      </div>
+
+      <!-- Project 4: Liveon Biolabs Career Page & Backend -->
+      <div class="card">
+        <h3 class="project-title">Career Page & Application Flow (Liveon Biolabs)</h3>
+        <p class="project-desc">
+          Implemented the careers page, candidate application form, and backend handling for submissions including email alerts
+          and storage. Ensured validation and user experience across devices.
+        </p>
+        <div class="project-meta">
+          <div><span class="meta-label">Tech:</span>
+            <ul class="tech-list">
+              <li>Contact Form 7</li><li>WordPress</li><li>Custom PHP hooks</li>
+            </ul>
+          </div>
+          <div style="margin-top:8px;"><span class="meta-label">Role:</span> Form design, server-side integration, file handling, and testing.</div>
+          <div style="margin-top:8px;"><span class="meta-label">Outcome:</span> Reliable applicant intake with automated notifications and clear data capture.</div>
+        </div>
+      </div>
+
+      <!-- Project 5: Metroleads — Data Modeling & MySQL -->
+      <div class="card">
+        <h3 class="project-title">Metroleads — Data Modeling (MySQL)</h3>
+        <p class="project-desc">
+          Designed the relational schema for a lead management system (Metroleads), including entities, normalization,
+          indexing strategy, and optimized queries for analytics and reporting.
+        </p>
+        <div class="project-meta">
+          <div><span class="meta-label">Tech:</span>
+            <ul class="tech-list">
+              <li>MySQL</li><li>ER Diagrams</li><li>SQL Optimization</li>
+            </ul>
+          </div>
+          <div style="margin-top:8px;"><span class="meta-label">Role:</span> Schema design, normalization, query tuning, and documentation.</div>
+          <div style="margin-top:8px;"><span class="meta-label">Outcome:</span> Scalable schema that improved reporting speed and maintainability.</div>
+        </div>
+      </div>
+
+      <!-- Project 6: Smart RF Shielding Enclosure (Concept + SEO Workflow) -->
+      <div class="card">
+        <h3 class="project-title">Smart RF Shielding Enclosure — Concept & SEO</h3>
+        <p class="project-desc">
+          Conceptualized a Smart RF Shielding Enclosure with IoT monitoring for environmental/health checks and created the
+          SEO/content strategy for the product pages to attract industrial and telecom customers.
+        </p>
+        <div class="project-meta">
+          <div><span class="meta-label">Tech:</span>
+            <ul class="tech-list">
+              <li>IoT (concept)</li><li>WordPress</li><li>SEO Strategy</li><li>Analytics</li>
+            </ul>
+          </div>
+          <div style="margin-top:8px;"><span class="meta-label">Role:</span> Product concept, monitoring architecture, and SEO planning for product launch.</div>
+          <div style="margin-top:8px;"><span class="meta-label">Outcome:</span> Clear roadmap and SEO keywords ready for content creation and product pages.</div>
+        </div>
+      </div>
+
     </div>
-    <div class="card">
-      <h3><a href="projects.html#churn" style="color: inherit; text-decoration: none;">Customer Churn Prediction</a></h3>
-      <p>Built a predictive model to analyze customer retention patterns.</p>
-    </div>
-    <div class="card">
-      <h3><a href="projects.html#portfolio" style="color: inherit; text-decoration: none;">Portfolio Website</a></h3>
-      <p>This portfolio site! Built with pure HTML, CSS & JS.</p>
-    </div>
-    <div class="card">
-      <h3><a href="projects.html#rfshield" style="color: inherit; text-decoration: none;">Smart RF Shielding Enclosure (Concept)</a></h3>
-      <p>End-to-end IoT monitoring concept with analytics dashboard for reliability and UX clarity.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contact -->
   <section id="contact" style="text-align: center;">
